@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Skill - Peerly</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Peerly</div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html">Skills</a></li>
+                <li><a href="offer.html">Offer a Skill</a></li>
+                <li><a href="find.html" class="active">Find a Skill</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="find-skill">
+            <h1>Find a Skill to Learn</h1>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for a skill...">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="technology">Technology</option>
+                    <option value="design">Design</option>
+                    <option value="business">Business</option>
+                    <option value="languages">Languages</option>
+                    <option value="arts">Arts & Crafts</option>
+                </select>
+                <button id="searchBtn" class="btn primary">Search</button>
+            </div>
+
+            <div class="results-container">
+                <div class="results-header">
+                    <h2>Available Skills</h2>
+                    <div class="sort-options">
+                        <span>Sort by: </span>
+                        <select id="sortBy">
+                            <option value="newest">Newest</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="alphabetical">A-Z</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="skills-list" id="skillsList">
+                    <!-- Skills will be dynamically loaded here -->
+                    <div class="skill-listing">
+                        <h3>Graphic Design Basics</h3>
+                        <p class="instructor">By: Alex Ouma</p>
+                        <p>Learn the fundamentals of design and how to use tools like Adobe Photoshop and Illustrator.
+                        </p>
+                        <span class="category">Design</span>
+                        <button class="btn secondary">Learn More</button>
+                    </div>
+
+                    <div class="skill-listing">
+                        <h3>Web Development 101</h3>
+                        <p class="instructor">By: Samwel Kirimi</p>
+                        <p>Introduction to HTML, CSS, and JavaScript for beginners.</p>
+                        <span class="category">Technology</span>
+                        <button class="btn secondary">Learn More</button>
+                    </div>
+
+                    <div class="skill-listing">
+                        <h3>Public Speaking Mastery</h3>
+                        <p class="instructor">By: Jane Ogutu</p>
+                        <p>Overcome stage fright and deliver powerful presentations.</p>
+                        <span class="category">Communication</span>
+                        <button class="btn secondary">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Peerly.Skills Shared. Futures Built.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
