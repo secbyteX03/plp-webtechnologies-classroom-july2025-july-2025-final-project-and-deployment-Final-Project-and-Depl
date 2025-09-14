@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 
 <body>
@@ -17,74 +18,139 @@
     <header></header>
 
     <main>
-        <section class="contact-section">
-            <h1>Get In Touch</h1>
-            <p>Have questions or want to partner with us? We'd love to hear from you!</p>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Get in Touch With Us</h1>
+                <p>Whether you want to learn more, share feedback, or explore partnerships — we'd love to hear from you.</p>
+            </div>
+        </section>
 
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Contact Information</h2>
-                    <p><strong>Email:</strong> <a href="mailto:info@peerly.org">info@peerly.org</a></p>
-                    <p><strong>Phone:</strong> +254-722-222-222</p>
-                    <p><strong>Address:</strong> Westlands Business District, Nairobi, Kenya</p>
-                    <div class="social-links">
-                        <h3>Follow Us</h3>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon">FB</a>
-                            <a href="#" class="social-icon">TW</a>
-                            <a href="#" class="social-icon">IG</a>
-                            <a href="#" class="social-icon">LI</a>
+        <div class="contact-page-container">
+            <div class="contact-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions or want to get in touch? We'd love to hear from you.</p>
+            </div>
+            
+            <div class="contact-layout">
+                <!-- Left Column: Contact Form -->
+                <div class="contact-form-column">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name*</label>
+                            <input type="text" id="fullName" name="fullName" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject*</label>
+                            <select id="subject" name="subject" class="form-control" required>
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="support">Support</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message*</label>
+                            <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Right Column: Contact Info + Map -->
+                <div class="contact-info-column">
+                    <div class="contact-info">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Our Location</h3>
+                                <p>Westlands, Nairobi, Kenya</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone Number</h3>
+                                <p>+254 722 222 222</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email Address</h3>
+                                <p>info@peerly.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.9161649689212!2d36.812!3d-1.268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173f5f02e4a3%3A0x8a8d01937f1df!2sWestlands%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1699999999999" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            title="Our Location on Map">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Section Below -->
+            <div class="facts-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="facts-grid">
+                    <div class="fact-card">
+                        <div class="fact-header">
+                            <h3>How do I sign up to teach a skill?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="fact-content">
+                            <p>Simply go to our <a href="skills/offer.html">Offer a Skill</a> page and fill out the form with details about the skill you'd like to teach. Our team will review your submission and get back to you within 2 business days.</p>
+                        </div>
+                    </div>
+
+                    <div class="fact-card">
+                        <div class="fact-header">
+                            <h3>Is there a cost to join the platform?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="fact-content">
+                            <p>No, joining and using Peerly is completely free! We believe in making skill-sharing accessible to everyone. You can browse skills, connect with peers, and share your knowledge without any charges.</p>
+                        </div>
+                    </div>
+
+                    <div class="fact-card">
+                        <div class="fact-header">
+                            <h3>How do I report inappropriate content?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="fact-content">
+                            <p>If you come across any content that violates our community guidelines, please contact us immediately at <a href="mailto:report@peerly.com">report@peerly.com</a> with details of the content you wish to report. Our moderation team will review it promptly.</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="contact-form">
-                    <h2>Send Us a Message</h2>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name*</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email*</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message*</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn primary">Send Message</button>
-                    </form>
-                </div>
             </div>
-
-            <div class="faq-section">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq-item">
-                    <h3>How do I sign up to teach a skill?</h3>
-                    <p>Simply go to our <a href="skills/offer.html">Offer a Skill</a> page and fill out the form with
-                        details about the skill you'd like to teach.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Is there a cost to join the platform?</h3>
-                    <p>No, joining and using the basic features of Youth Skill Share is completely free!</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How do I report inappropriate content?</h3>
-                    <p>Please contact us immediately at <a
-                            href="mailto:report@youthskills.org">report@youthskills.org</a> with details of the content
-                        you wish to report.</p>
-                </div>
-            </div>
-        </section>
+        </div>
+        </div>
     </main>
 
     <!-- Footer will be loaded here by loadTemplates.js -->
@@ -93,6 +159,46 @@
     <!-- Scripts -->
     <script src="js/loadTemplates.js"></script>
     <script src="js/main.js"></script>
-</body>
+    <script>
+        // Toggle functionality for FAQ items
+        document.addEventListener('DOMContentLoaded', function() {
+            const factHeaders = document.querySelectorAll('.fact-header');
+            
+            factHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const factCard = this.parentElement;
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.toggle-icon');
+                    
+                    // Toggle active class
+                    factCard.classList.toggle('active');
+                    
+                    // Toggle between + and - icons
+                    if (factCard.classList.contains('active')) {
+                        icon.textContent = '-';
+                    } else {
+                        icon.textContent = '+';
+                    }
+                });
+            });
 
+            // Form submission handler
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Simple form validation
+                    const name = document.getElementById('fullName').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const message = document.getElementById('message').value.trim();
+                    
+                    if (name && email && message) {
+                        alert('Thanks for reaching out! We\'ll get back to you soon.');
+                        contactForm.reset();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
 </html>
