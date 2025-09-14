@@ -220,3 +220,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 *Built with ❤️ for the PLP Web Development Final Project*
+
+## 📚 Assignment Instructions
+This project was created as part of the PLP Web Development Final Assignment. You can find the complete assignment instructions in [ASSIGNMENT_INSTRUCTIONS.md](ASSIGNMENT_INSTRUCTIONS.md).
