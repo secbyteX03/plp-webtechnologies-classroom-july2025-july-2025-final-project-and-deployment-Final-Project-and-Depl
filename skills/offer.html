@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/offer.css">
 </head>
 
 <body>
@@ -17,46 +18,145 @@
     <header></header>
 
     <main>
-        <section class="offer-skill">
-            <h1>Offer Your Skill</h1>
-            <p>Share your knowledge and help others learn something new!</p>
+        <!-- Hero Section -->
+        <section class="offer-hero">
+            <div class="hero-content">
+                <h1>Share Your Skills. Empower Others.</h1>
+                <p>Offer your knowledge and help peers learn new skills while growing your own experience.</p>
+            </div>
+        </section>
 
-            <form id="skillForm" class="skill-form">
-                <div class="form-group">
-                    <label for="skillName">Skill Name*</label>
-                    <input type="text" id="skillName" name="skillName" required>
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="section-title">Why Share Your Skills?</h2>
+                <p class="section-subtitle">Join our community of peer teachers and make a difference</p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Build Experience</h3>
+                        <p>Practice teaching and enhance your communication skills while helping others learn.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Help Others</h3>
+                        <p>Make a positive impact by sharing your knowledge and supporting your peers' growth.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Get Recognized</h3>
+                        <p>Earn recognition in the Peerly community and build your personal brand.</p>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="form-group">
-                    <label for="category">Category*</label>
-                    <select id="category" name="category" required>
-                        <option value="">Select a category</option>
-                        <option value="technology">Technology</option>
-                        <option value="design">Design</option>
-                        <option value="business">Business</option>
-                        <option value="languages">Languages</option>
-                        <option value="arts">Arts & Crafts</option>
-                        <option value="other">Other</option>
-                    </select>
+        <!-- Offer Form Section -->
+        <section class="offer-form-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>Offer Your Skill</h2>
+                        <p>Fill out the form below to share your knowledge with the community</p>
+                    </div>
+                    
+                    <form id="skillForm" class="skill-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name*</label>
+                            <input type="text" id="fullName" name="fullName" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="skillTitle">Skill Title*</label>
+                            <input type="text" id="skillTitle" name="skillTitle" class="form-control" placeholder="e.g., Basic Web Development" required>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="description">Short Description*</label>
+                            <textarea id="description" name="description" class="form-control" rows="3" required></textarea>
+                            <small>Briefly describe what you'll teach (1-2 lines)</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="category">Category*</label>
+                            <select id="category" name="category" class="form-control" required>
+                                <option value="">Select a category</option>
+                                <option value="technology">Technology</option>
+                                <option value="design">Design & Creative</option>
+                                <option value="business">Business</option>
+                                <option value="languages">Languages</option>
+                                <option value="academic">Academic Help</option>
+                                <option value="life-skills">Life Skills</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="availability">Availability*</label>
+                            <input type="text" id="availability" name="availability" class="form-control" placeholder="e.g., Weekends, Evenings" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Preferred Mode*</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="mode" value="online" checked>
+                                    <span>Online</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="mode" value="in-person">
+                                    <span>In-person</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="mode" value="both">
+                                    <span>Both</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMethod">Preferred Contact Method*</label>
+                            <select id="contactMethod" name="contactMethod" class="form-control" required>
+                                <option value="">Select contact method</option>
+                                <option value="email">Email</option>
+                                <option value="whatsapp">WhatsApp</option>
+                                <option value="phone">Phone Call</option>
+                                <option value="telegram">Telegram</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="contactInfo">Contact Information*</label>
+                            <input type="text" id="contactInfo" name="contactInfo" class="form-control" placeholder="Enter your email, phone number, or username" required>
+                        </div>
+                        
+                        <div class="form-group full-width" style="margin-top: 2rem;">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Submit Skill Offer
+                            </button>
+                        </div>
+                    </form>
                 </div>
-
-                <div class="form-group">
-                    <label for="description">Description*</label>
-                    <textarea id="description" name="description" rows="4" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="availability">Availability</label>
-                    <input type="text" id="availability" name="availability" placeholder="e.g., Weekends, Evenings">
-                </div>
-
-                <div class="form-group">
-                    <label for="contactEmail">Your Email*</label>
-                    <input type="email" id="contactEmail" name="contactEmail" required>
-                </div>
-
-                <button type="submit" class="btn primary">Submit Skill</button>
-            </form>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Your knowledge can change someone's future. Start sharing today.</h2>
+                <a href="#skillForm" class="btn">
+                    <i class="fas fa-chalkboard-teacher"></i> Offer Your Skill
+                </a>
+            </div>
         </section>
     </main>
 
@@ -65,7 +165,40 @@
 
     <!-- Scripts -->
     <script src="../js/loadTemplates.js"></script>
+    <script>
+        // Store form submissions in localStorage
+        document.getElementById('skillForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                skillTitle: document.getElementById('skillTitle').value,
+                description: document.getElementById('description').value,
+                category: document.getElementById('category').value,
+                availability: document.getElementById('availability').value,
+                mode: document.querySelector('input[name="mode"]:checked').value,
+                contactMethod: document.getElementById('contactMethod').value,
+                contactInfo: document.getElementById('contactInfo').value,
+                date: new Date().toISOString()
+            };
+            
+            // Get existing skills or initialize empty array
+            const existingSkills = JSON.parse(localStorage.getItem('offeredSkills') || '[]');
+            
+            // Add new skill
+            existingSkills.push(formData);
+            
+            // Save back to localStorage
+            localStorage.setItem('offeredSkills', JSON.stringify(existingSkills));
+            
+            // Show success message
+            alert('Thank you for offering your skill! Your submission has been received.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
     <script src="../js/main.js"></script>
 </body>
-
 </html>
