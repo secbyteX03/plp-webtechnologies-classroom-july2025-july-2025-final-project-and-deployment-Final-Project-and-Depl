@@ -9,42 +9,87 @@ Peerly is a peer-learning directory that connects people who want to learn new s
 - Build a community of learners and teachers
 - Support the UN Sustainable Development Goals
 
-## 🚀 Features (Planned)
-- Browse available skills
-- Offer to teach a skill
-- Search and filter skills
-- User profiles and ratings
-- Secure messaging system
+## 🚀 Features
+### Implemented Features
+- Responsive navigation with mobile menu
+- Modern, accessible UI with consistent design language
+- Interactive sections: Popular Skills, Quick Stats, Success Stories
+- Contact form with validation
+- Reusable components (header, footer)
+
+### Planned Features
+- User authentication and profiles
+- Skill search and filtering
+- Ratings and reviews system
+- Messaging between users
 
 ## 🛠️ Tech Stack
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- [Additional technologies will be added as the project progresses]
+- **Frontend**
+  - HTML5 (semantic markup)
+  - CSS3 (Flexbox, Grid, Variables, Animations)
+  - JavaScript (ES6+)
+  - Font Awesome Icons
+  - Google Fonts (Poppins, Open Sans)
 
 ## 📁 Project Structure
 ```
 youth-skill-share/
-├── index.html          # Home page
-├── skills/             # Skills directory
-│   ├── index.html      # Skills page
-│   ├── offer.html      # Offer a skill form
-│   └── find.html       # Find a skill
-├── contact.html        # Contact page
-├── css/                # Styles directory
-│   └── styles.css
-├── js/                 # JavaScript files
-│   └── main.js
-└── assets/             # Images and other assets
-    └── images/
+├── index.html              # Home page
+├── skills/                 # Skills directory
+│   ├── index.html          # Browse all skills
+│   ├── offer.html          # Offer a skill form
+│   └── find.html           # Find specific skills
+├── contact.html            # Contact page
+├── templates/              # Reusable components
+│   ├── header.html         # Site header
+│   └── footer.html         # Site footer
+├── css/                    # Styles directory
+│   └── styles.css          # Main stylesheet
+├── js/                     # JavaScript files
+│   ├── main.js             # Main JavaScript
+│   ├── home.js             # Homepage-specific scripts
+│   └── loadTemplates.js    # Template loader
+└── assets/                 # Static assets
+    ├── images/             # Image assets
+    └── icons/              # Icon assets
 ```
 
-## 📝 Part 1: Planning
-- [x] Define project purpose and goals
-- [x] Outline website pages and structure
-- [x] Create initial file structure
-- [ ] Create wireframes for each page
-- [ ] Plan user flow and navigation
+## 🎨 Design System
+- **Colors**
+  - Primary: `#4a6fa5` (Blue)
+  - Secondary: `#ff8c42` (Orange)
+  - Accent: `#ff6b35` (Darker Orange)
+  - Background: `#f8fafc` (Light Gray)
+  - Text: `#1e293b` (Dark Gray)
+
+- **Typography**
+  - Headings: Poppins (Semi-bold, 600)
+  - Body: Open Sans (Regular, 400)
+  - Base font size: 16px
+  - Line height: 1.6
+
+## 🚀 Getting Started
+1. Clone the repository
+2. Open `index.html` in a modern web browser
+3. Explore the different pages using the navigation
+
+## 📝 Development Status
+- [x] Phase 1: Planning & Setup
+  - [x] Define project scope and goals
+  - [x] Create file structure
+  - [x] Set up version control
+
+- [x] Phase 2: UI Development
+  - [x] Create responsive layout
+  - [x] Implement core pages
+  - [x] Add interactive elements
+  - [x] Ensure cross-browser compatibility
+
+- [ ] Phase 3: Functionality (In Progress)
+  - [ ] Implement user authentication
+  - [ ] Add skill search functionality
+  - [ ] Create user profiles
+  - [ ] Add messaging system
 
 ## 🙌 How to Contribute
 1. Fork the repository
