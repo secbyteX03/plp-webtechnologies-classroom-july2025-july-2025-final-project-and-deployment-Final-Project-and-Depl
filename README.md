@@ -109,8 +109,8 @@ youth-skill-share/
 ### Local Development
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/peerly-skill-share.git
-   cd peerly-skill-share
+   git clone https://github.com/secbyteX03/plp-webtechnologies-classroom-july2025-july-2025-final-project-and-deployment-Final-Project-and-Depl.git
+   cd plp-webtechnologies-classroom-july2025-july-2025-final-project-and-deployment-Final-Project-and-Depl
    ```
 
 2. Open the project in your code editor

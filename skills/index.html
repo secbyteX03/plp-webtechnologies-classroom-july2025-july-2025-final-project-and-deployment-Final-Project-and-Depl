@@ -124,46 +124,106 @@
         <section class="learning-paths">
             <div class="container">
                 <h2>Not sure where to start?</h2>
-                <p class="section-subtitle">Follow these learning paths to achieve your goals</p>
+                <p class="section-subtitle">Follow these learning paths to achieve your goals. Click on a path to explore the steps.</p>
 
-                <div class="path-card">
-                    <div class="path-header">
-                        <h3>Build a Tech Career</h3>
-                        <span class="path-steps">3 steps</span>
+                <div class="paths-container">
+                    <!-- Path 1: Build a Tech Career -->
+                    <div class="path-card" data-path="tech-career">
+                        <div class="path-header">
+                            <h3>Build a Tech Career</h3>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="path-content">
+                            <div class="path-steps">
+                                <div class="step">
+                                    <span class="step-number">1</span>
+                                    <span class="step-text">Start with Web Development (HTML, CSS, JavaScript)</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">2</span>
+                                    <span class="step-text">Learn Version Control (Git & GitHub)</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">3</span>
+                                    <span class="step-text">Master a Frontend Framework (React, Vue, or Angular)</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">4</span>
+                                    <span class="step-text">Learn Backend Development (Node.js, Python, etc.)</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">5</span>
+                                    <span class="step-text">Build and Deploy Real Projects</span>
+                                </div>
+                            </div>
+                            <div class="path-progress">
+                                <div class="progress-bar" style="width: 20%"></div>
+                            </div>
+                            <small class="progress-text">1 of 5 steps completed</small>
+                        </div>
                     </div>
-                    <div class="path-steps">
-                        <div class="step">
-                            <span class="step-number">1</span>
-                            <span class="step-text">Start with Web Development</span>
-                        </div>
-                        <div class="step">
-                            <span class="step-number">2</span>
-                            <span class="step-text">Then Mobile Development</span>
-                        </div>
-                        <div class="step">
-                            <span class="step-number">3</span>
-                            <span class="step-text">Then Data Analytics</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="path-card">
-                    <div class="path-header">
-                        <h3>Boost Your Creativity</h3>
-                        <span class="path-steps">3 steps</span>
+                    <!-- Path 2: Creative Professional -->
+                    <div class="path-card" data-path="creative-pro">
+                        <div class="path-header">
+                            <h3>Become a Creative Pro</h3>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="path-content">
+                            <div class="path-steps">
+                                <div class="step">
+                                    <span class="step-number">1</span>
+                                    <span class="step-text">Master Design Fundamentals & Theory</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">2</span>
+                                    <span class="step-text">Learn Industry Tools (Figma, Adobe Creative Suite)</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">3</span>
+                                    <span class="step-text">Develop Your Unique Style</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">4</span>
+                                    <span class="step-text">Build a Strong Portfolio</span>
+                                </div>
+                            </div>
+                            <div class="path-progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <small class="progress-text">2 of 4 steps completed</small>
+                        </div>
                     </div>
-                    <div class="path-steps">
-                        <div class="step">
-                            <span class="step-number">1</span>
-                            <span class="step-text">Start with Graphic Design</span>
+
+                    <!-- Path 3: Digital Marketing -->
+                    <div class="path-card" data-path="digital-marketing">
+                        <div class="path-header">
+                            <h3>Master Digital Marketing</h3>
+                            <span class="toggle-icon">▼</span>
                         </div>
-                        <div class="step">
-                            <span class="step-number">2</span>
-                            <span class="step-text">Then Branding</span>
-                        </div>
-                        <div class="step">
-                            <span class="step-number">3</span>
-                            <span class="step-text">Then Digital Marketing</span>
+                        <div class="path-content">
+                            <div class="path-steps">
+                                <div class="step">
+                                    <span class="step-number">1</span>
+                                    <span class="step-text">Learn Marketing Fundamentals</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">2</span>
+                                    <span class="step-text">Master Social Media Marketing</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">3</span>
+                                    <span class="step-text">Understand SEO & Content Strategy</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">4</span>
+                                    <span class="step-text">Learn Analytics & Data-Driven Decisions</span>
+                                </div>
+                            </div>
+                            <div class="path-progress">
+                                <div class="progress-bar" style="width: 0%"></div>
+                            </div>
+                            <small class="progress-text">Not started yet</small>
                         </div>
                     </div>
                 </div>
@@ -185,6 +245,9 @@
 
     <!-- Load header and footer templates -->
     <script src="../js/loadTemplates.js"></script>
+    <!-- Page specific JavaScript -->
+    <script src="../js/learning-paths.js"></script>
+    <script src="../js/skills.js"></script>
     <script src="../js/main.js"></script>
 </body>
 
