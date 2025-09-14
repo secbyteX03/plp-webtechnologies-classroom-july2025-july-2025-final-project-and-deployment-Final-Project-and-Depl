@@ -1,6 +1,13 @@
 /* Skills Page Specific Styles */
 
-/* Skills Hero Section */
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero Section */
 .skills-hero {
     background: linear-gradient(rgba(22, 96, 136, 0.9), rgba(22, 96, 136, 0.9)), 
                 url('../assets/images/hero-bg.jpg') center/cover no-repeat;
@@ -15,11 +22,13 @@
 
 .skills-hero .hero-content {
     max-width: 800px;
+    margin: 0 auto;
 }
 
 .skills-hero h1 {
     font-size: 3rem;
     margin-bottom: 1.5rem;
+    line-height: 1.2;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -27,113 +36,395 @@
     font-size: 1.25rem;
     margin-bottom: 2rem;
     opacity: 0.95;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.hero-buttons {
+.search-container {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
-    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 2rem auto 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
 }
 
-/* Quick Categories Section */
-.quick-categories {
-    padding: 4rem 5%;
-    background-color: white;
+.search-input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
 }
 
-.quick-categories h2 {
+.search-btn {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+    background: var(--accent-color);
+}
+
+/* Skill Categories Section */
+.skill-categories {
+    padding: 5rem 0;
+    background-color: var(--light-gray);
+}
+
+.skill-categories h2 {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     color: var(--dark-blue);
+    font-size: 2rem;
 }
 
 .category-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 2rem;
 }
 
 .category-card {
     background: white;
-    border-radius: var(--border-radius);
-    padding: 2rem;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
     text-align: center;
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: var(--dark-gray);
     border: 1px solid #eee;
+    text-decoration: none;
 }
 
 .category-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-.category-card i {
-    font-size: 2.5rem;
+.category-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(74, 111, 165, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.category-icon i {
+    font-size: 2rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
-    display: block;
 }
 
 .category-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
 }
 
 .category-card p {
     color: #666;
-    font-size: 0.9rem;
-}
-
-/* Skills Grid Section */
-.skills-intro {
-    text-align: center;
-    padding: 3rem 5%;
-    background-color: var(--light-gray);
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 0 5% 4rem;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.skill-card {
-    background: white;
-    border-radius: var(--border-radius);
-    padding: 1.5rem;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-}
-
-.skill-card h3 {
-    color: var(--primary-color);
     margin-bottom: 0.75rem;
+    font-size: 0.95rem;
 }
 
-.skill-card .category {
+.skill-count {
     display: inline-block;
     background: var(--light-blue);
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 50px;
     font-size: 0.8rem;
-    margin-top: 1rem;
+    font-weight: 500;
+}
+
+/* Trending Skills */
+.trending-skills {
+    padding: 4rem 0;
+    background: white;
+}
+
+.trending-skills h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--dark-blue);
+    font-size: 1.75rem;
+}
+
+.trending-skills h2 i {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+.trending-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.trending-tag {
+    background: #f5f7fa;
+    color: var(--dark-blue);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #e1e5eb;
+}
+
+.trending-tag:hover {
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+/* Featured Teachers */
+.featured-teachers {
+    padding: 5rem 0;
+    background: var(--light-gray);
+}
+
+.featured-teachers h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-blue);
+    font-size: 2rem;
+}
+
+.teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.teacher-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px);
+}
+
+.teacher-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-card h3 {
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.teacher-skill {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.teacher-bio {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Learning Paths */
+.learning-paths {
+    padding: 5rem 0;
+    background: white;
+}
+
+.learning-paths h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--dark-blue);
+    font-size: 2rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.path-card {
+    background: var(--light-gray);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.path-card:hover {
+    transform: translateY(-3px);
+}
+
+.path-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e1e5eb;
+}
+
+.path-header h3 {
+    color: var(--dark-blue);
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.path-steps {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.step-text {
+    color: #444;
+    font-weight: 500;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 5rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-blue));
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-section .btn {
+    background: white;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
 }
 
 /* Responsive Adjustments */
+@media (max-width: 992px) {
+    .skills-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .category-grid,
+    .teachers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .skills-hero {
         min-height: 50vh;
@@ -141,23 +432,47 @@
     }
     
     .skills-hero h1 {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
     
-    .hero-buttons {
+    .skills-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .search-container {
         flex-direction: column;
-        gap: 1rem;
+        border-radius: 8px;
+        overflow: visible;
     }
     
-    .hero-buttons .btn {
-        width: 100%;
+    .search-input {
+        border-radius: 8px 8px 0 0;
         text-align: center;
     }
     
+    .search-btn {
+        border-radius: 0 0 8px 8px;
+        padding: 0.75rem;
+    }
+    
     .category-grid,
-    .skills-grid {
+    .teachers-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .trending-tags {
+        justify-content: flex-start;
+        padding: 0 1rem;
+    }
+    
+    .path-card {
+        padding: 1.5rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.75rem;
     }
 }

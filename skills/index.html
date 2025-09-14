@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse Skills - Peerly</title>
-    <meta name="description" content="Browse and discover skills shared by our community members. Find what you want to learn or share your own knowledge.">
+    <title>Explore Skills - Peerly</title>
+    <meta name="description"
+        content="Browse and discover skills shared by our community members. Find what you want to learn or share your own knowledge.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/skills.css">
@@ -18,67 +22,160 @@
     <header></header>
 
     <main>
-        <section class="hero skills-hero">
+        <!-- Hero Section -->
+        <section class="skills-hero">
             <div class="hero-content">
-                <h1>Discover & Share Skills</h1>
-                <p>Connect with peers who can teach you new skills or share your expertise with others.</p>
-                <div class="hero-buttons">
-                    <a href="find.html" class="btn btn-primary">Find a Skill</a>
-                    <a href="offer.html" class="btn btn-secondary">Offer a Skill</a>
+                <h1>Explore Skills. Discover Opportunities.</h1>
+                <p>Find skills shared by peers in technology, creativity, business, and more. Choose your path and start
+                    learning today.</p>
+                <div class="search-container">
+                    <input type="text" placeholder="Search skills..." class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
                 </div>
             </div>
         </section>
-        
-        <section class="quick-categories">
-            <h2>Popular Categories</h2>
-            <div class="category-grid">
-                <a href="find.html?category=tech" class="category-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Tech Skills</h3>
-                    <p>Programming, Web Dev, AI & more</p>
-                </a>
-                <a href="find.html?category=creative" class="category-card">
-                    <i class="fas fa-palette"></i>
-                    <h3>Creative Arts</h3>
-                    <p>Design, Music, Writing & more</p>
-                </a>
-                <a href="find.html?category=languages" class="category-card">
-                    <i class="fas fa-language"></i>
-                    <h3>Languages</h3>
-                    <p>Spanish, French, Sign Language & more</p>
-                </a>
-                <a href="find.html?category=academic" class="category-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>Academic Help</h3>
-                    <p>Math, Science, Test Prep & more</p>
-                </a>
+
+        <!-- Skill Categories Grid -->
+        <section class="skill-categories">
+            <div class="container">
+                <h2>Browse by Category</h2>
+                <div class="category-grid">
+                    <a href="#tech-skills" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Tech Skills</h3>
+                        <p>Web Dev, Mobile Apps, Data Analysis</p>
+                        <span class="skill-count">24 skills</span>
+                    </a>
+                    <a href="#creative-skills" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Creative Skills</h3>
+                        <p>Graphic Design, Photography, Music</p>
+                        <span class="skill-count">18 skills</span>
+                    </a>
+                    <a href="#business-skills" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Business Skills</h3>
+                        <p>Marketing, Public Speaking, Finance</p>
+                        <span class="skill-count">15 skills</span>
+                    </a>
+                    <a href="#life-skills" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Life Skills</h3>
+                        <p>Cooking, Wellness, Languages</p>
+                        <span class="skill-count">22 skills</span>
+                    </a>
+                </div>
             </div>
-        </section>
-        
-        <section class="skills-intro">
-            <h2>Available Skills</h2>
-            <p>Browse through skills shared by our community members.</p>
         </section>
 
-        <section class="skills-grid">
-            <!-- Skill cards will be dynamically loaded here -->
-            <div class="skill-card">
-                <h3>Graphic Design</h3>
-                <p>
-                    Learn the basics of design principles and tools like Adobe Photoshop
-                    and Illustrator.
-                </p>
-                <span class="category">Design</span>
+        <!-- Trending Skills -->
+        <section class="trending-skills">
+            <div class="container">
+                <h2><i class="fas fa-fire"></i> Trending This Month</h2>
+                <div class="trending-tags">
+                    <span class="trending-tag">Cybersecurity</span>
+                    <span class="trending-tag">UI/UX Design</span>
+                    <span class="trending-tag">Video Editing</span>
+                    <span class="trending-tag">Data Science</span>
+                    <span class="trending-tag">Digital Marketing</span>
+                </div>
             </div>
-            <div class="skill-card">
-                <h3>Web Development</h3>
-                <p>Build websites using HTML, CSS, and JavaScript from scratch.</p>
-                <span class="category">Technology</span>
+        </section>
+
+        <!-- Featured Peer Teachers -->
+        <section class="featured-teachers">
+            <div class="container">
+                <h2>Featured Peer Teachers</h2>
+                <div class="teachers-grid">
+                    <div class="teacher-card">
+                        <img src="../assets/images/avatar1.jpg" alt="Alex Ouma" class="teacher-avatar">
+                        <h3>Alex Ouma</h3>
+                        <p class="teacher-skill">Web Development</p>
+                        <p class="teacher-bio">Helping peers learn coding basics and build their first websites.</p>
+                        <button class="btn btn-outline">Connect</button>
+                    </div>
+                    <div class="teacher-card">
+                        <img src="../assets/images/avatar2.jpg" alt="Mary Omwami" class="teacher-avatar">
+                        <h3>Mary Omwami</h3>
+                        <p class="teacher-skill">Graphic Design</p>
+                        <p class="teacher-bio">Teaching design principles and Adobe tools for beginners.</p>
+                        <button class="btn btn-outline">Connect</button>
+                    </div>
+                    <div class="teacher-card">
+                        <img src="../assets/images/avatar3.jpg" alt="Antony Mogaka" class="teacher-avatar">
+                        <h3>Antony Mogaka</h3>
+                        <p class="teacher-skill">Public Speaking</p>
+                        <p class="teacher-bio">Helping you find confidence in public speaking.</p>
+                        <button class="btn btn-outline">Connect</button>
+                    </div>
+                </div>
             </div>
-            <div class="skill-card">
-                <h3>Public Speaking</h3>
-                <p>Overcome stage fright and deliver compelling presentations.</p>
-                <span class="category">Communication</span>
+        </section>
+
+        <!-- Learning Paths -->
+        <section class="learning-paths">
+            <div class="container">
+                <h2>Not sure where to start?</h2>
+                <p class="section-subtitle">Follow these learning paths to achieve your goals</p>
+
+                <div class="path-card">
+                    <div class="path-header">
+                        <h3>Build a Tech Career</h3>
+                        <span class="path-steps">3 steps</span>
+                    </div>
+                    <div class="path-steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <span class="step-text">Start with Web Development</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <span class="step-text">Then Mobile Development</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <span class="step-text">Then Data Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="path-card">
+                    <div class="path-header">
+                        <h3>Boost Your Creativity</h3>
+                        <span class="path-steps">3 steps</span>
+                    </div>
+                    <div class="path-steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <span class="step-text">Start with Graphic Design</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <span class="step-text">Then Branding</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <span class="step-text">Then Digital Marketing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Can't find your skill?</h2>
+                <p>Be the first to offer it and help others learn!</p>
+                <a href="offer.html" class="btn btn-primary">Offer a Skill</a>
             </div>
         </section>
     </main>
@@ -86,7 +183,7 @@
     <!-- Footer will be loaded here by loadTemplates.js -->
     <footer></footer>
 
-    <!-- Scripts -->
+    <!-- Load header and footer templates -->
     <script src="../js/loadTemplates.js"></script>
     <script src="../js/main.js"></script>
 </body>
