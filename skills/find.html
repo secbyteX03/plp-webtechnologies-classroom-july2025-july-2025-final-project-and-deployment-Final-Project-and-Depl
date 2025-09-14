@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/find.css">
 </head>
 
 <body>
@@ -17,64 +18,135 @@
     <header></header>
 
     <main>
-        <section class="find-skill">
-            <h1>Find a Skill to Learn</h1>
+        <!-- Hero Section -->
+        <section class="find-hero">
+            <div class="hero-content">
+                <h1>Discover Skills. Learn from Peers.</h1>
+                <p>Browse available skills and connect with peer teachers ready to guide you.</p>
+            </div>
+        </section>
 
+        <!-- Search & Filter Section -->
+        <section class="search-filter-section">
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search for a skill...">
+                <input type="text" id="searchInput" placeholder="Search skills...">
                 <select id="categoryFilter">
                     <option value="">All Categories</option>
                     <option value="technology">Technology</option>
-                    <option value="design">Design</option>
+                    <option value="design">Design & Creative</option>
                     <option value="business">Business</option>
                     <option value="languages">Languages</option>
-                    <option value="arts">Arts & Crafts</option>
+                    <option value="academic">Academic Help</option>
+                    <option value="life-skills">Life Skills</option>
                 </select>
-                <button id="searchBtn" class="btn primary">Search</button>
+                <select id="availabilityFilter">
+                    <option value="">Any Time</option>
+                    <option value="weekdays">Weekdays</option>
+                    <option value="weekends">Weekends</option>
+                    <option value="mornings">Mornings</option>
+                    <option value="evenings">Evenings</option>
+                </select>
+                <select id="locationFilter">
+                    <option value="">Any Location</option>
+                    <option value="online">Online</option>
+                    <option value="nairobi">Nairobi</option>
+                    <option value="mombasa">Mombasa</option>
+                    <option value="kisumu">Kisumu</option>
+                </select>
+                <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i> Search
+                </button>
             </div>
+        </section>
 
-            <div class="results-container">
-                <div class="results-header">
+        <!-- Skills Listings -->
+        <section class="skills-section">
+            <div class="container">
+                <div class="section-header">
                     <h2>Available Skills</h2>
-                    <div class="sort-options">
-                        <span>Sort by: </span>
-                        <select id="sortBy">
-                            <option value="newest">Newest</option>
-                            <option value="popular">Most Popular</option>
-                            <option value="alphabetical">A-Z</option>
-                        </select>
-                    </div>
+                    <p>Find the perfect skill to learn from our community of peer teachers</p>
                 </div>
 
-                <div class="skills-list" id="skillsList">
+                <div class="skills-grid" id="skillsList">
                     <!-- Skills will be dynamically loaded here -->
-                    <div class="skill-listing">
-                        <h3>Graphic Design Basics</h3>
-                        <p class="instructor">By: Alex Ouma</p>
-                        <p>Learn the fundamentals of design and how to use tools like Adobe Photoshop and Illustrator.
-                        </p>
-                        <span class="category">Design</span>
-                        <button class="btn secondary">Learn More</button>
+                    <div class="no-skills" id="noSkillsMessage" style="display: none;">
+                        <i class="far fa-folder-open"></i>
+                        <h3>No skills available yet</h3>
+                        <p>Be the first to offer a skill and help others learn something new!</p>
+                        <a href="offer.html" class="btn btn-primary">Offer a Skill</a>
                     </div>
 
-                    <div class="skill-listing">
-                        <h3>Web Development 101</h3>
-                        <p class="instructor">By: Samwel Kirimi</p>
-                        <p>Introduction to HTML, CSS, and JavaScript for beginners.</p>
-                        <span class="category">Technology</span>
-                        <button class="btn secondary">Learn More</button>
-                    </div>
+                    <!-- Sample skill cards (will be populated by JavaScript) -->
+                </div>
+            </div>
+        </section>
 
-                    <div class="skill-listing">
-                        <h3>Public Speaking Mastery</h3>
-                        <p class="instructor">By: Jane Ogutu</p>
-                        <p>Overcome stage fright and deliver powerful presentations.</p>
-                        <span class="category">Communication</span>
-                        <button class="btn secondary">Learn More</button>
+        <!-- Featured Skills -->
+        <section class="featured-skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Skills</h2>
+                    <p>Check out these popular skills in high demand</p>
+                </div>
+
+                <div class="featured-grid">
+                    <div class="featured-skill">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Learn to build websites and web applications</p>
+                    </div>
+                    <div class="featured-skill">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Graphic Design</h3>
+                        <p>Master design principles and tools</p>
+                    </div>
+                    <div class="featured-skill">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Digital Marketing</h3>
+                        <p>Grow your online presence</p>
+                    </div>
+                    <div class="featured-skill">
+                        <i class="fas fa-language"></i>
+                        <h3>Language Learning</h3>
+                        <p>Learn a new language with peers</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Can't find what you're looking for?</h2>
+                <p>Request a new skill and we'll help you find a peer teacher who can help!</p>
+                <a href="#" class="btn" id="requestSkillBtn">
+                    <i class="fas fa-plus-circle"></i> Request a Skill
+                </a>
+            </div>
+        </section>
+
+        <!-- Request Skill Modal -->
+        <div class="modal" id="requestSkillModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Request a New Skill</h3>
+                <form id="requestSkillForm">
+                    <div class="form-group">
+                        <label for="skillRequest">What skill would you like to learn?*</label>
+                        <input type="text" id="skillRequest" name="skillRequest" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="requestEmail">Your Email*</label>
+                        <input type="email" id="requestEmail" name="requestEmail" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="requestNotes">Additional Notes (optional)</label>
+                        <textarea id="requestNotes" name="requestNotes" class="form-control" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Request</button>
+                </form>
+            </div>
+        </div>
     </main>
 
     <!-- Footer will be loaded here by loadTemplates.js -->
@@ -82,7 +154,220 @@
 
     <!-- Scripts -->
     <script src="../js/loadTemplates.js"></script>
-    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load skills from localStorage
+            const skills = JSON.parse(localStorage.getItem('offeredSkills') || '[]');
+            const skillsList = document.getElementById('skillsList');
+            const noSkillsMessage = document.getElementById('noSkillsMessage');
+            
+            // Display skills or show message if none available
+            function displaySkills(skillsToDisplay) {
+                if (skillsToDisplay.length === 0) {
+                    noSkillsMessage.style.display = 'block';
+                    return;
+                }
+                
+                noSkillsMessage.style.display = 'none';
+                
+                // Clear existing skills (except the no skills message)
+                Array.from(skillsList.children).forEach(child => {
+                    if (child.id !== 'noSkillsMessage') {
+                        skillsList.removeChild(child);
+                    }
+                });
+                
+                // Add skills to the list
+                skillsToDisplay.forEach(skill => {
+                    const skillCard = document.createElement('div');
+                    skillCard.className = 'skill-card';
+                    skillCard.innerHTML = `
+                        <div class="skill-image" style="background-image: url('../assets/images/skill-${skill.category || 'default'}.jpg')">
+                            <span class="skill-category">${skill.category || 'General'}</span>
+                        </div>
+                        <div class="skill-content">
+                            <h3>${skill.skillTitle}</h3>
+                            <p class="skill-teacher">By ${skill.fullName}</p>
+                            <p class="skill-description">${skill.description}</p>
+                            <div class="skill-meta">
+                                <span class="skill-availability">
+                                    <i class="far fa-clock"></i> ${skill.availability || 'Flexible'}
+                                </span>
+                                <button class="btn-connect" data-contact="${skill.contactInfo}" data-method="${skill.contactMethod}">
+                                    Connect
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    skillsList.appendChild(skillCard);
+                });
+                
+                // Add event listeners to connect buttons
+                document.querySelectorAll('.btn-connect').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const contactMethod = this.getAttribute('data-method');
+                        const contactInfo = this.getAttribute('data-contact');
+                        alert(`Contact ${contactInfo} via ${contactMethod} to connect about this skill!`);
+                    });
+                });
+            }
+            
+            // Initial display of skills
+            displaySkills(skills);
+            
+            // Search and filter functionality
+            const searchInput = document.getElementById('searchInput');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const availabilityFilter = document.getElementById('availabilityFilter');
+            const locationFilter = document.getElementById('locationFilter');
+            const searchBtn = document.getElementById('searchBtn');
+            
+            function filterSkills() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const category = categoryFilter.value;
+                const availability = availabilityFilter.value;
+                const location = locationFilter.value;
+                
+                const filteredSkills = skills.filter(skill => {
+                    const matchesSearch = skill.skillTitle.toLowerCase().includes(searchTerm) || 
+                                        skill.description.toLowerCase().includes(searchTerm);
+                    const matchesCategory = !category || skill.category === category;
+                    const matchesAvailability = !availability || 
+                        (skill.availability && skill.availability.toLowerCase().includes(availability));
+                    // Note: Location filtering would require adding location data to the skill object
+                    
+                    return matchesSearch && matchesCategory && matchesAvailability;
+                });
+                
+                displaySkills(filteredSkills);
+            }
+            
+            // Event listeners for search and filters
+            searchBtn.addEventListener('click', filterSkills);
+            searchInput.addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') filterSkills();
+            });
+            categoryFilter.addEventListener('change', filterSkills);
+            availabilityFilter.addEventListener('change', filterSkills);
+            locationFilter.addEventListener('change', filterSkills);
+            
+            // Request Skill Modal
+            const modal = document.getElementById('requestSkillModal');
+            const requestBtn = document.getElementById('requestSkillBtn');
+            const closeBtn = document.getElementsByClassName('close-modal')[0];
+            const requestForm = document.getElementById('requestSkillForm');
+            
+            requestBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.style.display = 'block';
+            });
+            
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            requestForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const skillRequest = document.getElementById('skillRequest').value;
+                const email = document.getElementById('requestEmail').value;
+                const notes = document.getElementById('requestNotes').value;
+                
+                // In a real app, you would send this data to a server
+                console.log('Skill Request:', { skillRequest, email, notes });
+                
+                // Show success message
+                alert('Thank you for your request! We\'ll notify you when we find a peer teacher for this skill.');
+                
+                // Reset form and close modal
+                requestForm.reset();
+                modal.style.display = 'none';
+            });
+        });
+    </script>
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            right: 1.5rem;
+            top: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .modal h3 {
+            margin-top: 0;
+            color: var(--dark-blue);
+        }
+        
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #444;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        textarea.form-control {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .btn-primary {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            width: 100%;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-color);
+        }
+    </style>
 </body>
-
 </html>
